@@ -56,19 +56,19 @@ export function About() {
             <div className="relative">
               <div className="group relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink-soft sm:rounded-[2rem]">
                 <Image
-                  src="/portrait.svg"
-                  alt="Portrait placeholder for Ali Irfan — replace with your own photo"
+                  src="/personal.jpeg"
+                  alt="Ali Irfan"
                   fill
-                  unoptimized
+                  quality={90}
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.025]"
+                  className="object-cover object-center transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.025]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/5 to-transparent" />
                 <div className="absolute inset-0 ring-1 ring-inset ring-white/10" />
 
                 <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-ink/50 px-3 py-1.5 backdrop-blur-md">
                   <p className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/50">
-                    Portrait placeholder
+                    Portrait / 2026
                   </p>
                 </div>
 
