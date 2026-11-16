@@ -48,7 +48,7 @@ export function About() {
           label="About me"
           title="The person behind"
           accent="the pixels."
-          description="A designer's eye, an engineer's mind and an obsession with the details that make a digital experience feel effortless."
+          description="A Kerala-based web developer and designer with a designer's eye, an engineer's mind and an obsession with the details that make a digital experience feel effortless."
         />
 
         <div className="mt-16 grid gap-12 lg:grid-cols-12 lg:gap-16 xl:mt-20">
@@ -57,7 +57,7 @@ export function About() {
               <div className="group relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-white/10 bg-ink-soft sm:rounded-[2rem]">
                 <Image
                   src="/personal.jpeg"
-                  alt="Ali Irfan"
+                  alt="Ali Irfan, web developer and UI/UX designer based in Kerala, India"
                   fill
                   quality={90}
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -79,12 +79,12 @@ export function About() {
                         Ali Irfan
                       </p>
                       <p className="mt-1 font-mono text-[8px] uppercase tracking-[0.14em] text-muted">
-                        Creative developer & designer
+                        Web developer & UI/UX designer
                       </p>
                     </div>
-                    <span className="flex items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.1em] text-white/45">
+                    <span className="flex items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.1em] text-white/50">
                       <MapPin className="h-3 w-3" />
-                      Your City
+                      Kerala, India
                     </span>
                   </div>
                 </div>
@@ -117,9 +117,10 @@ export function About() {
             <div className="mt-9 grid gap-6 sm:grid-cols-2">
               <Reveal delay={0.14} y={24}>
                 <p className="text-sm leading-[1.8] text-muted">
-                  I&apos;m Ali Irfan, a creative developer and designer working
-                  at the intersection of visual design and front-end
-                  engineering. I care about the space between a great idea and
+                  I&apos;m Ali Irfan, a web developer and UI/UX designer based in
+                  Kerala, India, working at the intersection of visual design and
+                  front-end engineering. I build websites with Next.js, React and
+                  TypeScript, and I care about the space between a great idea and
                   the moment someone experiences it.
                 </p>
               </Reveal>

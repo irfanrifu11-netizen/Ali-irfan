@@ -25,7 +25,6 @@ export function WordReveal({
 
   return (
     <motion.span
-      aria-label={text}
       className={cn("inline", className)}
       initial="hidden"
       whileInView="visible"
@@ -39,6 +38,7 @@ export function WordReveal({
         },
       }}
     >
+      <span className="sr-only">{text}</span>
       {words.map((word, index) => (
         <span
           key={`${word}-${index}`}

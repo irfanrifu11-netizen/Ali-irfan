@@ -17,7 +17,6 @@ export function Footer() {
             <a
               href="#home"
               className="group inline-flex items-center gap-3"
-              aria-label="Ali Irfan — back to top"
             >
               <span className="relative grid h-10 w-10 place-items-center overflow-hidden rounded-full border border-white/15 bg-white/[0.03]">
                 <span className="absolute inset-0 bg-gradient-to-br from-electric/40 via-violet/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -72,21 +71,35 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <p className="eyebrow">Socials</p>
-            <div className="mt-5 flex flex-col gap-3">
-              {siteConfig.socials.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="group inline-flex items-center gap-1.5 text-[12px] text-muted transition-colors hover:text-paper"
-                >
-                  {social.label}
-                  <ArrowUpRight className="h-3 w-3 opacity-0 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
-                </a>
-              ))}
-            </div>
+            {siteConfig.socials.length > 0 ? (
+              <>
+                <p className="eyebrow">Socials</p>
+                <div className="mt-5 flex flex-col gap-3">
+                  {siteConfig.socials.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="group inline-flex items-center gap-1.5 text-[12px] text-muted transition-colors hover:text-paper"
+                    >
+                      {social.label}
+                      <ArrowUpRight className="h-3 w-3 opacity-0 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
+                    </a>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="eyebrow">Based in</p>
+                <div className="mt-5 flex flex-col gap-3">
+                  <p className="text-[12px] text-muted">{siteConfig.location}</p>
+                  <p className="text-[12px] text-muted">
+                    Working with clients worldwide
+                  </p>
+                </div>
+              </>
+            )}
           </div>
 
           <div className="lg:col-span-2 lg:text-right">
@@ -102,15 +115,15 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-3 border-t border-white/[0.08] py-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-mono text-[8px] uppercase tracking-[0.13em] text-white/30">
+          <p className="font-mono text-[8px] uppercase tracking-[0.13em] text-white/50">
             © {year} Ali Irfan. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-5">
-            <p className="font-mono text-[8px] uppercase tracking-[0.13em] text-white/30">
-              Your City, Country
+            <p className="font-mono text-[8px] uppercase tracking-[0.13em] text-white/50">
+              Kerala, India
             </p>
             <span className="h-3 w-px bg-white/10" />
-            <p className="font-mono text-[8px] uppercase tracking-[0.13em] text-white/30">
+            <p className="font-mono text-[8px] uppercase tracking-[0.13em] text-white/50">
               Designed & built with intention
             </p>
           </div>

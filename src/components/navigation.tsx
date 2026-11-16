@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { navItems } from "@/lib/data";
+import { navItems, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const sectionIds = ["home", ...navItems.map((item) => item.id)];
@@ -83,7 +83,6 @@ export function Navigation() {
             <a
               href="#home"
               onClick={() => setOpen(false)}
-              aria-label="Ali Irfan — back to top"
               className="group flex items-center gap-3 rounded-full pr-2"
             >
               <span className="relative grid h-9 w-9 place-items-center overflow-hidden rounded-full border border-white/15 bg-white/[0.03]">
@@ -221,7 +220,7 @@ export function Navigation() {
                 >
                   <div>
                     <p className="eyebrow mb-1">Start a project</p>
-                    <p className="text-sm text-paper">hello@yourdomain.com</p>
+                    <p className="text-sm text-paper">{siteConfig.email}</p>
                   </div>
                   <span className="grid h-10 w-10 place-items-center rounded-full bg-paper text-ink">
                     <ArrowUpRight className="h-4 w-4" />
@@ -230,7 +229,7 @@ export function Navigation() {
                 <div className="flex items-center justify-between">
                   <p className="eyebrow">© 2026 Ali Irfan</p>
                   <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">
-                    Your City, Country
+                    Kerala, India
                   </p>
                 </div>
               </motion.div>

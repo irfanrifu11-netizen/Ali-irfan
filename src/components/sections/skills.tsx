@@ -70,7 +70,7 @@ export function Skills() {
               the right instrument for the idea.
             </p>
             <div className="mt-5 flex items-center gap-3">
-              <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/35">
+              <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-white/50">
                 08 disciplines
               </span>
               <span className="h-px flex-1 bg-white/10" />
@@ -106,7 +106,7 @@ export function Skills() {
                     >
                       <Icon className="h-[18px] w-[18px]" strokeWidth={1.5} />
                     </span>
-                    <span className="font-mono text-[9px] tracking-[0.14em] text-white/25">
+                    <span className="font-mono text-[9px] tracking-[0.14em] text-white/50">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
@@ -124,7 +124,7 @@ export function Skills() {
 
                     <div className="mt-5">
                       <div className="mb-2 flex items-center justify-between">
-                        <span className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/30">
+                        <span className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/50">
                           Proficiency
                         </span>
                         <span className="font-mono text-[9px] text-white/55">

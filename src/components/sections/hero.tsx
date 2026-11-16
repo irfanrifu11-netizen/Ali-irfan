@@ -84,7 +84,7 @@ export function Hero() {
           <motion.p variants={fadeUp} className="eyebrow flex items-center gap-2.5">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-electric" />
             Independent portfolio
-            <span className="hidden text-white/25 sm:inline">/</span>
+            <span className="hidden text-white/50 sm:inline">/</span>
             <span className="hidden sm:inline">2026</span>
           </motion.p>
           <motion.div
@@ -92,8 +92,8 @@ export function Hero() {
             className="flex items-center gap-4 sm:gap-6"
           >
             <p className="eyebrow hidden md:block">
-              Creative Developer <span className="text-white/20">/</span> Designer{" "}
-              <span className="text-white/20">/</span> Digital Creator
+              Web Developer <span className="text-white/50">/</span> UI/UX Designer{" "}
+              <span className="text-white/50">/</span> Next.js
             </p>
             <span className="flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/[0.06] px-3 py-1.5 font-mono text-[9px] uppercase tracking-[0.12em] text-emerald-300">
               <span className="relative flex h-1.5 w-1.5">
@@ -125,7 +125,7 @@ export function Hero() {
               <span className="eyebrow text-paper/65">Hello, I&apos;m Ali</span>
             </motion.div>
 
-            <h2 className="text-[clamp(3rem,5.8vw,6.25rem)] font-medium uppercase leading-[0.91] tracking-[-0.06em]">
+            <h1 className="text-[clamp(3rem,5.8vw,6.25rem)] font-medium uppercase leading-[0.91] tracking-[-0.06em]">
               <span className="block overflow-hidden pb-[0.04em]">
                 <motion.span
                   variants={{
@@ -171,15 +171,16 @@ export function Hero() {
                   </span>
                 </motion.span>
               </span>
-            </h2>
+            </h1>
 
             <motion.p
               variants={fadeUp}
               className="mt-7 max-w-[31rem] text-[15px] leading-relaxed text-muted sm:text-base"
             >
-              I&apos;m a creative developer and designer turning ambitious ideas
-              into refined, high-performance digital experiences — where
-              thoughtful design meets precise engineering.
+              I&apos;m a web developer and UI/UX designer based in Kerala, India,
+              turning ambitious ideas into refined, high-performance websites
+              with Next.js, React and modern front-end tools — where thoughtful
+              design meets precise engineering.
             </motion.p>
 
             <motion.div
@@ -210,7 +211,7 @@ export function Hero() {
               </a>
               <span className="h-px w-12 bg-white/10" />
               <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted">
-                Based in your city · Working worldwide
+                Based in Kerala, India · Working worldwide
               </p>
             </motion.div>
           </motion.div>
@@ -330,7 +331,7 @@ export function Hero() {
           className="relative flex items-end justify-between border-t border-white/[0.07] pb-7 pt-4 sm:pb-8"
         >
           <div className="w-full overflow-hidden">
-            <h1 className="display whitespace-nowrap text-[clamp(3.7rem,14.2vw,14rem)] uppercase leading-[0.78]">
+            <p className="display whitespace-nowrap text-[clamp(3.7rem,14.2vw,14rem)] uppercase leading-[0.78]">
               <motion.span
                 initial={reduceMotion ? false : { y: "115%" }}
                 animate={{ y: 0 }}
@@ -340,7 +341,7 @@ export function Hero() {
                 Ali <span className="text-stroke">Irfan</span>
                 <span className="text-electric">.</span>
               </motion.span>
-            </h1>
+            </p>
           </div>
 
           <motion.a
@@ -365,7 +366,7 @@ export function Hero() {
           className="pointer-events-none absolute bottom-36 right-8 hidden 2xl:block"
         >
           <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-muted [writing-mode:vertical-rl]">
-            Creative developer · Designer · Digital creator
+            Web developer · Kerala, India
           </p>
         </motion.div>
       </div>

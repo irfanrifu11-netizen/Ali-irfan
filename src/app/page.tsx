@@ -7,31 +7,14 @@ import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { Services } from "@/components/sections/services";
 import { Skills } from "@/components/sections/skills";
-import { siteConfig } from "@/lib/data";
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteConfig.shortName,
-  url: siteConfig.url,
-  jobTitle: "Creative Developer & Designer",
-  description: siteConfig.description,
-  email: `mailto:${siteConfig.email}`,
-  knowsAbout: [
-    "Web Development",
-    "UI/UX Design",
-    "React",
-    "Next.js",
-    "Creative Development",
-  ],
-};
+import { structuredData } from "@/lib/schema";
 
 export default function Home() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <main className="relative">
         <Hero />

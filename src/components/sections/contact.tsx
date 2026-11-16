@@ -127,8 +127,9 @@ export function Contact() {
 
           <Reveal delay={0.15} y={20} className="lg:pb-2">
             <p className="max-w-sm text-sm leading-[1.8] text-muted">
-              Have an idea, a half-formed thought or a project that needs a
-              fresh perspective? I&apos;d love to hear about it.
+              Based in Kerala and working with clients worldwide. Have an idea,
+              a half-formed thought or a project that needs a fresh perspective?
+              I&apos;d love to hear about it.
             </p>
             <div className="mt-5 flex items-center gap-2.5">
               <span className="relative flex h-1.5 w-1.5">
@@ -167,8 +168,8 @@ export function Contact() {
                     )}
                   </button>
                 </div>
-                <p className="mt-3 text-[11px] text-muted/70">
-                  Replace this with your real email address before launch.
+                <p className="mt-3 text-[11px] text-muted/90">
+                  The quickest way to reach me — I read every message personally.
                 </p>
 
                 <div className="hairline my-6" />
@@ -189,34 +190,36 @@ export function Contact() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.08} y={30} className="mt-4">
-              <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
-                <div className="flex items-center justify-between">
-                  <p className="eyebrow">Elsewhere</p>
-                  <ArrowUpRight className="h-3.5 w-3.5 text-white/25" />
+            {siteConfig.socials.length > 0 ? (
+              <Reveal delay={0.08} y={30} className="mt-4">
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-6">
+                  <div className="flex items-center justify-between">
+                    <p className="eyebrow">Elsewhere</p>
+                    <ArrowUpRight className="h-3.5 w-3.5 text-white/50" />
+                  </div>
+                  <div className="mt-4 grid grid-cols-2 gap-2">
+                    {siteConfig.socials.map((social) => {
+                      const Icon = socialIconMap[social.label] ?? ArrowUpRight;
+                      return (
+                        <a
+                          key={social.label}
+                          href={social.href}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="group flex items-center gap-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3 py-2.5 transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.05]"
+                        >
+                          <Icon className="h-3.5 w-3.5 text-muted transition-colors group-hover:text-paper" />
+                          <span className="text-[11px] text-muted transition-colors group-hover:text-paper">
+                            {social.label}
+                          </span>
+                          <ArrowUpRight className="ml-auto h-3 w-3 text-white/50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-paper/60" />
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
-                <div className="mt-4 grid grid-cols-2 gap-2">
-                  {siteConfig.socials.map((social) => {
-                    const Icon = socialIconMap[social.label] ?? ArrowUpRight;
-                    return (
-                      <a
-                        key={social.label}
-                        href={social.href}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="group flex items-center gap-2.5 rounded-xl border border-white/[0.07] bg-white/[0.02] px-3 py-2.5 transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.05]"
-                      >
-                        <Icon className="h-3.5 w-3.5 text-muted transition-colors group-hover:text-paper" />
-                        <span className="text-[11px] text-muted transition-colors group-hover:text-paper">
-                          {social.label}
-                        </span>
-                        <ArrowUpRight className="ml-auto h-3 w-3 text-white/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-paper/60" />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            ) : null}
 
             <Reveal delay={0.14} y={24} className="mt-4">
               <div className="flex items-center gap-4 rounded-2xl border border-emerald-400/10 bg-emerald-400/[0.035] p-5">
@@ -253,7 +256,7 @@ export function Contact() {
                     A few details are all it takes to start the conversation.
                   </p>
                 </div>
-                <span className="hidden rounded-full border border-white/10 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.12em] text-white/35 sm:block">
+                <span className="hidden rounded-full border border-white/10 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.12em] text-white/50 sm:block">
                   No commitment
                 </span>
               </div>
@@ -277,7 +280,7 @@ export function Contact() {
                     onChange={(event) => updateField("name", event.target.value)}
                     aria-invalid={Boolean(errors.name)}
                     aria-describedby={errors.name ? "name-error" : undefined}
-                    className="h-12 w-full rounded-xl border border-white/[0.09] bg-ink/40 px-4 text-sm text-paper outline-none transition-colors placeholder:text-white/20 focus:border-electric/60 focus:bg-ink/60"
+                    className="h-12 w-full rounded-xl border border-white/[0.09] bg-ink/40 px-4 text-sm text-paper outline-none transition-colors placeholder:text-white/50 focus:border-electric/60 focus:bg-ink/60"
                   />
                   {errors.name ? (
                     <p id="name-error" className="mt-1.5 text-[10px] text-rose-400">
@@ -304,7 +307,7 @@ export function Contact() {
                     onChange={(event) => updateField("email", event.target.value)}
                     aria-invalid={Boolean(errors.email)}
                     aria-describedby={errors.email ? "email-error" : undefined}
-                    className="h-12 w-full rounded-xl border border-white/[0.09] bg-ink/40 px-4 text-sm text-paper outline-none transition-colors placeholder:text-white/20 focus:border-electric/60 focus:bg-ink/60"
+                    className="h-12 w-full rounded-xl border border-white/[0.09] bg-ink/40 px-4 text-sm text-paper outline-none transition-colors placeholder:text-white/50 focus:border-electric/60 focus:bg-ink/60"
                   />
                   {errors.email ? (
                     <p id="email-error" className="mt-1.5 text-[10px] text-rose-400">
@@ -320,7 +323,7 @@ export function Contact() {
                   className="mb-2 flex items-center justify-between font-mono text-[8px] uppercase tracking-[0.15em] text-muted"
                 >
                   <span>The project</span>
-                  <span className="text-white/25">{form.message.length} / 1000</span>
+                  <span className="text-white/50">{form.message.length} / 1000</span>
                 </label>
                 <textarea
                   id="message"
@@ -334,7 +337,7 @@ export function Contact() {
                   onChange={(event) => updateField("message", event.target.value)}
                   aria-invalid={Boolean(errors.message)}
                   aria-describedby={errors.message ? "message-error" : undefined}
-                  className="w-full resize-none rounded-xl border border-white/[0.09] bg-ink/40 px-4 py-3.5 text-sm leading-relaxed text-paper outline-none transition-colors placeholder:text-white/20 focus:border-electric/60 focus:bg-ink/60"
+                  className="w-full resize-none rounded-xl border border-white/[0.09] bg-ink/40 px-4 py-3.5 text-sm leading-relaxed text-paper outline-none transition-colors placeholder:text-white/50 focus:border-electric/60 focus:bg-ink/60"
                 />
                 {errors.message ? (
                   <p id="message-error" className="mt-1.5 text-[10px] text-rose-400">
@@ -355,7 +358,7 @@ export function Contact() {
                   )}
                 </MagneticSubmit>
 
-                <p className="flex items-center gap-2 text-[10px] text-muted/70">
+                <p className="flex items-center gap-2 text-[10px] text-muted/90">
                   <LockKeyhole className="h-3 w-3" />
                   Your details stay between us.
                 </p>
@@ -385,7 +388,7 @@ export function Contact() {
               </div>
 
               <div className="mt-6 border-t border-white/[0.08] pt-4">
-                <p className="flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.11em] text-white/25">
+                <p className="flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.11em] text-white/50">
                   <Mail className="h-3 w-3" />
                   Simple form · Opens your email client
                 </p>

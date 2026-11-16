@@ -67,9 +67,10 @@ export function Services() {
             className="max-w-md lg:pb-2"
           >
             <p className="text-sm leading-[1.8] text-muted">
-              Whether you&apos;re starting with a blank page or refining
-              something already in motion, I bring design thinking and
-              front-end craft to every stage of the process.
+              Based in Kerala and working with clients worldwide, whether
+              you&apos;re starting with a blank page or refining something
+              already in motion — I bring design thinking and front-end craft to
+              every stage of the process.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <span className="h-px flex-1 bg-white/10" />
@@ -117,7 +118,7 @@ export function Services() {
                     <span className="grid h-11 w-11 place-items-center rounded-xl border border-white/[0.09] bg-white/[0.04] text-electric-soft transition-colors duration-500 group-hover:border-electric/25 group-hover:bg-electric/[0.08]">
                       <Icon className="h-5 w-5" strokeWidth={1.4} />
                     </span>
-                    <span className="grid h-8 w-8 place-items-center rounded-full border border-white/10 text-white/30 transition-all duration-500 group-hover:rotate-45 group-hover:border-electric/40 group-hover:text-paper">
+                    <span className="grid h-8 w-8 place-items-center rounded-full border border-white/10 text-white/50 transition-all duration-500 group-hover:rotate-45 group-hover:border-electric/40 group-hover:text-paper">
                       <ArrowUpRight className="h-3.5 w-3.5" />
                     </span>
                   </div>
@@ -138,7 +139,7 @@ export function Services() {
                       {service.deliverables.map((item) => (
                         <span
                           key={item}
-                          className="rounded-full border border-white/[0.08] bg-ink/20 px-2.5 py-1 font-mono text-[7px] uppercase tracking-[0.11em] text-white/40"
+                          className="rounded-full border border-white/[0.08] bg-ink/20 px-2.5 py-1 font-mono text-[7px] uppercase tracking-[0.11em] text-white/50"
                         >
                           {item}
                         </span>

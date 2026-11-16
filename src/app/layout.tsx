@@ -27,43 +27,59 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteTitle = "Ali Irfan | Web Developer in Kerala";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Ali Irfan — Creative Developer & Designer",
-    template: "%s — Ali Irfan",
+    default: siteTitle,
+    template: "%s | Ali Irfan",
   },
   description: siteConfig.description,
+  applicationName: siteConfig.shortName,
   keywords: [
     "Ali Irfan",
-    "creative developer",
-    "frontend developer",
-    "UI/UX designer",
+    "web developer in Kerala",
+    "freelance web developer Kerala",
+    "website developer Kerala",
+    "frontend developer Kerala",
+    "Next.js developer Kerala",
+    "React developer Kerala",
+    "creative developer Kerala",
+    "UI/UX designer Kerala",
+    "web design Kerala",
     "portfolio",
-    "Next.js developer",
-    "web design",
   ],
-  authors: [{ name: siteConfig.shortName }],
+  authors: [{ name: siteConfig.shortName, url: siteConfig.url }],
   creator: siteConfig.shortName,
+  publisher: siteConfig.shortName,
+  category: "technology",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: siteConfig.url,
     siteName: siteConfig.shortName,
-    title: "Ali Irfan — Creative Developer & Designer",
+    title: siteTitle,
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ali Irfan — Creative Developer & Designer",
+    title: siteTitle,
     description: siteConfig.description,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
