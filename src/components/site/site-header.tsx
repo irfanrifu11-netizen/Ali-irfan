@@ -55,8 +55,8 @@ export function SiteHeader() {
         </div>
       )}
       <div className="bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
-        <div className="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6 lg:gap-10">
+          <div className="flex items-center gap-4 shrink-0">
             <Link className="flex items-center gap-3.5 group" href="/">
               <Image
                 alt="Maison Emblem Logo"
@@ -75,7 +75,8 @@ export function SiteHeader() {
               </div>
             </Link>
           </div>
-          <nav className="hidden xl:flex items-center gap-8 font-label-md text-label-md uppercase tracking-[0.14em]">
+          <div className="flex items-center gap-8 xl:gap-12">
+          <nav className="hidden xl:flex items-center gap-8 2xl:gap-10 font-label-md text-label-md uppercase tracking-[0.14em]">
             {navItems.map((item) => {
               const active = pathname === item.href;
               return (
@@ -94,7 +95,7 @@ export function SiteHeader() {
               );
             })}
           </nav>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center justify-end gap-5 lg:gap-6">
             <button
               aria-label="Search Catalogue"
               className="text-on-surface-variant hover:text-on-surface transition-colors flex items-center"
@@ -145,6 +146,7 @@ export function SiteHeader() {
                 />
               </Link>
             </div>
+          </div>
           </div>
         </div>
       </div>
