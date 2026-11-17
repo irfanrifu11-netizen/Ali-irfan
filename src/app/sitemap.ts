@@ -3,14 +3,12 @@ import { siteConfig } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
+  const routes = ["/", "/shopping-bag", "/the-palazzo-loafer"];
 
-  return [
-    {
-      url: siteConfig.url,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 1,
-      images: [`${siteConfig.url}/personal.jpeg`],
-    },
-  ];
+  return routes.map((route) => ({
+    url: `${siteConfig.url}${route}`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: route === "/" ? 1 : 0.8,
+  }));
 }
