@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/site/site-header";
-import { SiteFooter } from "@/components/site/site-footer";
+import { RestaurantProvider } from "@/components/restaurant/restaurant-provider";
+import { siteConfig } from "@/lib/data";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -20,11 +20,10 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Maison Chaussurer — Haute Footwear Editorial",
-    template: "%s — Maison Chaussurer",
+    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    template: `%s — ${siteConfig.name}`,
   },
-  description:
-    "Maison Chaussurer. Architectural footwear handcrafted in Civitanova Marche. Parisian atelier founded in 1984.",
+  description: siteConfig.description,
 };
 
 export default function RootLayout({
@@ -34,17 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${jakarta.variable}`}>
-      <head>
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-surface">
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+        <RestaurantProvider>{children}</RestaurantProvider>
       </body>
     </html>
   );
