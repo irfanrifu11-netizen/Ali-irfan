@@ -3,6 +3,10 @@ import { applyRemoteCoupon } from "@/lib/apps-script";
 
 export const dynamic = "force-dynamic";
 
+const LOCAL_COUPONS: Record<string, { rate: number; message: string }> = {
+  BIGDEAL50: { rate: 0.5, message: "50% off applied." },
+};
+
 export async function POST(request: Request) {
   let body: { code?: unknown; total?: unknown };
   try {
@@ -22,6 +26,17 @@ export async function POST(request: Request) {
       { success: false, message: "Enter a coupon code." },
       { status: 400 },
     );
+  }
+
+  const localCoupon = LOCAL_COUPONS[code];
+  if (localCoupon) {
+    const discount = Math.round(total * localCoupon.rate);
+    return NextResponse.json({
+      success: true,
+      message: localCoupon.message,
+      discount,
+      finalTotal: total - discount,
+    });
   }
 
   const result = await applyRemoteCoupon(code, total);
