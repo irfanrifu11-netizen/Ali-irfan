@@ -5,6 +5,7 @@ export const dynamic = "force-dynamic";
 
 const LOCAL_COUPONS: Record<string, { rate: number; message: string }> = {
   BIGDEAL50: { rate: 0.5, message: "50% off applied." },
+  WELCOME10: { rate: 0.1, message: "10% off applied." },
 };
 
 export async function POST(request: Request) {
