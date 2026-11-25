@@ -90,7 +90,7 @@ export function BloodRequests() {
         </div>
 
         <div className="grid gap-8 xl:grid-cols-[minmax(0,440px)_1fr] xl:items-start">
-          <div className="rounded-3xl border border-outline-variant bg-surface-container-lowest p-6 shadow-sm sm:p-8 xl:sticky xl:top-24">
+          <div className="rounded-3xl border border-outline-variant bg-surface-container-lowest p-6 sm:p-8 xl:sticky xl:top-24">
             <h3 className="mb-5 font-display text-2xl text-on-surface">Request details</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
@@ -263,7 +263,7 @@ export function BloodRequests() {
                             </span>
                           )}
                         </div>
-                        <h4 className="mt-3 font-semibold text-on-surface">
+                        <h4 className="mt-3 font-semibold text-accent">
                           {request.patientName}
                         </h4>
                         <p className="mt-1 flex items-center gap-1.5 text-sm text-on-surface-variant">
@@ -287,12 +287,12 @@ export function BloodRequests() {
                       </p>
                     )}
                     <div className="mt-auto flex items-center justify-between gap-3 border-t border-outline-variant pt-4">
-                      <span className="text-xs text-on-surface-variant">
+                      <span className="text-xs text-accent">
                         {request.contactName}
                       </span>
                       <a
                         href={`tel:${request.phone.replace(/\s/g, "")}`}
-                        className="inline-flex items-center gap-2 rounded-full border border-primary px-4 py-2 text-xs font-semibold text-primary transition hover:bg-primary hover:text-on-primary"
+                        className="inline-flex items-center gap-2 rounded-full border border-accent bg-accent px-4 py-2 text-xs font-semibold text-white transition hover:bg-brand-dark"
                       >
                         <Phone size={14} />
                         Contact

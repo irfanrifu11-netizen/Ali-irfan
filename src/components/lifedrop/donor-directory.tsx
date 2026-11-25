@@ -65,7 +65,7 @@ export function DonorDirectory() {
 
         <form
           onSubmit={handleSubmit}
-          className="grid gap-4 rounded-3xl border border-outline-variant bg-surface-container-lowest p-5 shadow-sm sm:grid-cols-[1fr_1.4fr_auto_auto] sm:items-end sm:p-6"
+          className="grid gap-4 rounded-3xl border border-outline-variant bg-surface-container-lowest p-5 sm:grid-cols-[1fr_1.4fr_auto_auto] sm:items-end sm:p-6"
         >
           <label className="block">
             <span className="mb-2 block text-xs font-semibold text-on-surface-variant">
@@ -139,11 +139,11 @@ export function DonorDirectory() {
             {visibleResults.map((donor) => (
               <article
                 key={donor.id}
-                className="rounded-2xl border border-outline-variant bg-surface-container-lowest p-5 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg"
+                className="rounded-2xl border border-outline-variant bg-surface-container-lowest p-5 transition hover:-translate-y-0.5 hover:border-primary/40"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <h3 className="font-display text-xl text-on-surface">
+                    <h3 className="font-display text-xl text-accent">
                       {donor.name}
                     </h3>
                     <p className="mt-1.5 flex items-center gap-1.5 text-sm text-on-surface-variant">
@@ -162,7 +162,7 @@ export function DonorDirectory() {
                 </div>
                 <a
                   href={`tel:${donor.phone.replace(/\s/g, "")}`}
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-on-primary transition hover:bg-brand-dark"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2.5 text-xs font-semibold uppercase tracking-widest text-white transition hover:bg-brand-dark"
                 >
                   <Phone size={14} />
                   {donor.phone}

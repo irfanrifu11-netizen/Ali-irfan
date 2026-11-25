@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Droplets } from "lucide-react";
+import { Droplet } from "lucide-react";
 import { siteConfig } from "@/lib/data";
 
 export function SiteFooter() {
@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 sm:flex-row sm:items-center">
         <div>
           <div className="flex items-center gap-2">
-            <Droplets size={20} className="text-primary" />
+            <Droplet size={20} className="text-accent" fill="currentColor" strokeWidth={1.5} />
             <span className="font-display text-2xl text-on-surface">
               {siteConfig.name}
             </span>

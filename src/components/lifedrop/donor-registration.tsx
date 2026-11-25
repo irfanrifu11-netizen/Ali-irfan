@@ -140,7 +140,7 @@ export function DonorRegistration() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-outline-variant bg-surface-container-lowest p-6 shadow-sm sm:p-8">
+        <div className="rounded-3xl border border-outline-variant bg-surface-container-lowest p-6 sm:p-8">
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="block">
